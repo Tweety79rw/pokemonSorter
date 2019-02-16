@@ -6,16 +6,27 @@ let marginTop = 50;
 let input;
 let button;
 function setup() {
-  createCanvas(800, 600);
-  input = createInput('', 'number');
+  let canvas = createCanvas(800, 600);
+  canvas.parent('#canvasContainer')
+  input = createInput('ID', 'number');
+  input.parent('#pokeId');
+  input.input(myEvent);
   // input.input(pokenum);
   input2 = createInput(1, 'number');
+  input2.parent('#boxNum');
+  input2.input(myEvent);
   // input2.input(startNum);
-  button = createButton("Go");
-  button.mousePressed(function() {
-    pokenum();
-    startNum();
-  })
+  // button = createButton("Go");
+  // button.parent('#form')
+  // button.mousePressed(function() {
+  //   pokenum();
+  //   startNum();
+  //   return false;
+  // });
+}
+function myEvent() {
+  pokenum();
+  startNum();
 }
 function pokenum() {
   pokemonNum = +input.value();

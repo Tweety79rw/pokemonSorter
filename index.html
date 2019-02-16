@@ -1,10 +1,35 @@
 <!doctype html>
 <html>
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+  <title>Pokemon Sorter</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="This helps you sort your pokemon in the pc">
+  <meta name="keywords" content="Pokemon, pixelmon, pc, sorting">
+  <meta name="author" content="Ryan Wilson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
   <script src="sketch.js"></script>
 </head>
-<body>
+<body style="margin-top:50px;">
+  <div class="ui container">
+    <div class="ui header">Pokemon Sorter</div>
+    <div class="ui grid">
+      <div class="twelve wide column">
+        <div id="canvasContainer"></div>
+      </div>
+      <div class="four wide column">
+        <form class="ui form" id="form" onsubmit="return false;">
+          <div class="field" id="pokeId">
+            <label>Pokemon Id</label>
+          </div>
+          <div class="field" id="boxNum">
+            <label>Starting box number</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
